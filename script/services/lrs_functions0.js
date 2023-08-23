@@ -166,31 +166,31 @@ function buildUrl(currentLrmNo, coordinateArr, lrm_indices) {
     //console.log(measureRanges.latitude.min);
     lat = coordinateArr[index0] || -90;
     lon = coordinateArr[index1] || 0;
-    // url = `https://lrs-ext.us-e1.cloudhub.io/api/elrs1?Lat=${lat}&Lon=${lon}`;
-    url = `https://grid-sys.us-e1.cloudhub.io/api/elrs1?Lat=${lat}&Lon=${lon}`;
+    url = `https://lrs-ext.us-e1.cloudhub.io/api/elrs1?Lat=${lat}&Lon=${lon}`;
+    // url = `https://grid-sys.us-e1.cloudhub.io/api/elrs1?Lat=${lat}&Lon=${lon}`;
   }
 
   else if (currentLrmNo == 2) {
     routeName = coordinateArr[index0];
     refMarker = coordinateArr[index1] || 0;
     displacement = coordinateArr[index2] || 0;
-    // url = `https://lrs-ext.us-e1.cloudhub.io/api/elrs2?RouteID=${routeName}&ReferenceMarker=${refMarker}&Displacement=${displacement}`;
-    url = `https://grid-sys.us-e1.cloudhub.io/api/elrs2?RouteID=${routeName}&ReferenceMarker=${refMarker}&Displacement=${displacement}`;
+    url = `https://lrs-ext.us-e1.cloudhub.io/api/elrs2?RouteID=${routeName}&ReferenceMarker=${refMarker}&Displacement=${displacement}`;
+    // url = `https://grid-sys.us-e1.cloudhub.io/api/elrs2?RouteID=${routeName}&ReferenceMarker=${refMarker}&Displacement=${displacement}`;
   }
 
   else if (currentLrmNo == 3) {
     //controlSecNum = coordinateArr[index0];
     controlSecNum = (coordinateArr[index0].toString().padStart(6, '0'));
     milePointMeasure = coordinateArr[index1] || 0;
-    // url = `https://lrs-ext.us-e1.cloudhub.io/api/elrs3?ControlSectionNumber=${controlSecNum}&MilePointMeasure=${milePointMeasure}`;
-    url = `https://grid-sys.us-e1.cloudhub.io/api/elrs3?ControlSectionNumber=${controlSecNum}&MilePointMeasure=${milePointMeasure}`;
+    url = `https://lrs-ext.us-e1.cloudhub.io/api/elrs3?ControlSectionNumber=${controlSecNum}&MilePointMeasure=${milePointMeasure}`;
+    // url = `https://grid-sys.us-e1.cloudhub.io/api/elrs3?ControlSectionNumber=${controlSecNum}&MilePointMeasure=${milePointMeasure}`;
   }
 
   else if (currentLrmNo == 4) {
     routeName = coordinateArr[index0];
     dfo = coordinateArr[index1] || 0;
-    // url = `https://lrs-ext.us-e1.cloudhub.io/api/elrs4?RouteID=${routeName}&DistanceFromOrigin=${dfo}`;
-    url = `https://grid-sys.us-e1.cloudhub.io/api/elrs4?RouteID=${routeName}&DistanceFromOrigin=${dfo}`;
+    url = `https://lrs-ext.us-e1.cloudhub.io/api/elrs4?RouteID=${routeName}&DistanceFromOrigin=${dfo}`;
+    // url = `https://grid-sys.us-e1.cloudhub.io/api/elrs4?RouteID=${routeName}&DistanceFromOrigin=${dfo}`;
   }
 
   return url;
